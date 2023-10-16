@@ -30,15 +30,16 @@
             <Image Aspect="AspectFill" Source="cartoon.jpg" />
         </Border>
         <skia:SKLottieView
+            x:Name="lottie"
             Grid.Row="1"
             IsAnimationEnabled="True"
             RepeatCount="-1"
             Source="robot.json" />
         <Button
             x:Name="btnFinish"
-            Clicked="BtnFinish_OnClicked"
             Grid.Row="2"
             BackgroundColor="#E8FF8E"
+            Clicked="BtnFinish_OnClicked"
             CornerRadius="35"
             FontSize="25"
             HeightRequest="75"

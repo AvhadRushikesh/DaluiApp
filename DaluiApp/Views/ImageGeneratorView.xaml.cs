@@ -9,6 +9,12 @@ public partial class ImageGeneratorView : ContentPage
 
     private void BtnFinish_OnClicked(object sender, EventArgs e)
     {
-        throw new NotImplementedException();
+        StopGeneration();
+    }
+
+    private void StopGeneration()
+    {
+        lottie.IsAnimationEnabled = false;
+        lottie.IsVisible = false;
     }
 }
