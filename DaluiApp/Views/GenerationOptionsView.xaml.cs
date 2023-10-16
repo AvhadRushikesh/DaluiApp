@@ -1,4 +1,5 @@
 using DaluiApp.Models;
+using Microsoft.Maui.Platform;
 
 namespace DaluiApp.Views;
 
@@ -6,11 +7,26 @@ public partial class GenerationOptionsView : ContentPage
 {
     public List<string> Options { get; set; }
     public List<ArtStyle> Styles { get; set; }
+
     public GenerationOptionsView()
     {
         InitializeComponent();
         FillOptions();
         BindingContext = this;
+
+        // Remove Editor control underline  
+        Microsoft.Maui.Handlers.EditorHandler.Mapper.AppendToMapping("MyCustomization", (h, v) =>
+        {
+#if ANDROID
+            h.PlatformView.BackgroundTintList =
+                Android.Content.Res.ColorStateList.ValueOf(Colors.Transparent.ToPlatform());
+
+#elif IOS || MACCATALYST
+
+#elif WINDOWS
+
+#endif
+        });
     }
 
     private void FillOptions()
