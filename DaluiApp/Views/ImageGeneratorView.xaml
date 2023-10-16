@@ -24,17 +24,26 @@
 
         <Border
             Grid.Row="1"
+            IsVisible="False"
             StrokeShape="RoundRectangle 20,20,20,20"
             StrokeThickness="0">
             <Image Aspect="AspectFill" Source="cartoon.jpg" />
         </Border>
+        <skia:SKLottieView
+            Grid.Row="1"
+            IsAnimationEnabled="True"
+            RepeatCount="-1"
+            Source="robot.json" />
         <Button
+            x:Name="btnFinish"
+            Clicked="BtnFinish_OnClicked"
             Grid.Row="2"
             BackgroundColor="#E8FF8E"
             CornerRadius="35"
             FontSize="25"
             HeightRequest="75"
             HorizontalOptions="Center"
+            Scale="0.1"
             Text="Finish"
             TextColor="#101216"
             VerticalOptions="Center"
