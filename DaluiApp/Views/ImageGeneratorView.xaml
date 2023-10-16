@@ -27,6 +27,17 @@
             StrokeThickness="0">
             <Image Aspect="AspectFill" Source="cartoon.jpg" />
         </Border>
+        <Button
+            Grid.Row="2"
+            BackgroundColor="#E8FF8E"
+            CornerRadius="35"
+            FontSize="25"
+            HeightRequest="75"
+            HorizontalOptions="Center"
+            Text="Finish"
+            TextColor="#101216"
+            VerticalOptions="Center"
+            WidthRequest="250" />
     </Grid>
 
 </ContentPage>
