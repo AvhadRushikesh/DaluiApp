@@ -20,6 +20,13 @@
                 Text="Time spent 30 second"
                 TextColor="#ACB1BB" />
         </VerticalStackLayout>
+
+        <Border
+            Grid.Row="1"
+            StrokeShape="RoundRectangle 20,20,20,20"
+            StrokeThickness="0">
+            <Image Aspect="AspectFill" Source="cartoon.jpg" />
+        </Border>
     </Grid>
 
 </ContentPage>
