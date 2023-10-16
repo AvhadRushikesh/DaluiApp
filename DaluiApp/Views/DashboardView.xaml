@@ -135,7 +135,7 @@
                                     <Label
                                         FontFamily="NexaLight"
                                         FontSize="15"
-                                        Text="{Binding Keywords}"
+                                        Text="{Binding Keywords, Converter={StaticResource ListToStringConverter}}"
                                         TextColor="White" />
                                 </VerticalStackLayout>
                             </Grid>
