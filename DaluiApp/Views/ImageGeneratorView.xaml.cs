@@ -16,5 +16,6 @@ public partial class ImageGeneratorView : ContentPage
     {
         lottie.IsAnimationEnabled = false;
         lottie.IsVisible = false;
+        imageBorder.IsVisible = true;
     }
 }

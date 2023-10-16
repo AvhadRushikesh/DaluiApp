@@ -23,6 +23,7 @@
         </VerticalStackLayout>
 
         <Border
+            x:Name="imageBorder"
             Grid.Row="1"
             IsVisible="False"
             StrokeShape="RoundRectangle 20,20,20,20"
