@@ -83,6 +83,14 @@
                                 Text="{Binding Name}"
                                 TextColor="White"
                                 VerticalTextAlignment="Center" />
+                            <Label
+                                Grid.Column="1"
+                                Margin="10,0,0,0"
+                                FontFamily="NexaHeavy"
+                                FontSize="12"
+                                Text="{Binding NoPhotos, StringFormat='{0} pictures'}"
+                                TextColor="#869CBD"
+                                VerticalOptions="Start" />
                         </VerticalStackLayout>
                     </Grid>
                 </DataTemplate>
