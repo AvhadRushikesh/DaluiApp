@@ -15,11 +15,35 @@
                 FontSize="30"
                 Text="Picture&#10;Generated"
                 TextColor="White" />
-            <Label
-                Margin="0,10,0,0"
-                FontSize="20"
-                Text="Time spent 30 second"
-                TextColor="#ACB1BB" />
+            <HorizontalStackLayout Margin="0,10,0,0">
+                <Label
+                    FontSize="20"
+                    Text="Time spent "
+                    TextColor="#ACB1BB"
+                    VerticalOptions="Center" />
+                <Grid>
+                    <Border
+                        x:Name="borderTime"
+                        Grid.Row="1"
+                        BackgroundColor="#E8FF8E"
+                        IsVisible="True"
+                        Opacity="0"
+                        Scale="1.1"
+                        StrokeShape="RoundRectangle 5,5,5,5"
+                        StrokeThickness="0" />
+                    <Label
+                        x:Name="lblTimer"
+                        FontSize="20"
+                        Text="0"
+                        TextColor="#ACB1BB"
+                        VerticalOptions="Center" />
+                </Grid>
+                <Label
+                    FontSize="20"
+                    Text=" Seconds"
+                    TextColor="#ACB1BB"
+                    VerticalOptions="Center" />
+            </HorizontalStackLayout>
         </VerticalStackLayout>
 
         <Border
@@ -30,6 +54,14 @@
             StrokeThickness="0">
             <Image Aspect="AspectFill" Source="cartoon.jpg" />
         </Border>
+        <Border
+            x:Name="imageAnimation"
+            Grid.Row="1"
+            BackgroundColor="#E8FF8E"
+            IsVisible="False"
+            Opacity=".9"
+            StrokeShape="RoundRectangle 20,20,20,20"
+            StrokeThickness="0" />
         <skia:SKLottieView
             x:Name="lottie"
             Grid.Row="1"
@@ -40,12 +72,11 @@
             x:Name="btnFinish"
             Grid.Row="2"
             BackgroundColor="#E8FF8E"
-            Clicked="BtnFinish_OnClicked"
             CornerRadius="35"
             FontSize="25"
             HeightRequest="75"
             HorizontalOptions="Center"
-            Scale="0.1"
+            Scale="0"
             Text="Finish"
             TextColor="#101216"
             VerticalOptions="Center"
