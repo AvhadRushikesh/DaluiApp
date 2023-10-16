@@ -114,6 +114,24 @@
                                 Grid.RowSpan="2"
                                 Aspect="AspectFill"
                                 Source="{Binding ImagePath}" />
+                            <Grid Grid.Row="1">
+                                <Rectangle
+                                    Fill="Black"
+                                    Opacity=".5"
+                                    StrokeThickness="0" />
+                                <VerticalStackLayout Margin="10,0,0,0" VerticalOptions="Center">
+                                    <Label
+                                        FontFamily="NexaHeavy"
+                                        FontSize="25"
+                                        Text="{Binding MainKeyword}"
+                                        TextColor="White" />
+                                    <Label
+                                        FontFamily="NexaLight"
+                                        FontSize="15"
+                                        Text="{Binding Keywords}"
+                                        TextColor="White" />
+                                </VerticalStackLayout>
+                            </Grid>
                         </Grid>
                     </Border>
                 </DataTemplate>
